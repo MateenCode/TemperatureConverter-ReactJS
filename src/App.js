@@ -1,25 +1,40 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { FaEquals } from "react-icons/fa";
 
 class App extends Component {
+  state = {
+    farenheit:"",
+    celsius:""
+  }
+
+  handleChange = event =>{
+    this.setState{
+      
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="container">
+        <div className="jumbotron">
+          <h1>Temperature Unit Converter</h1>
+          <hr />
+
+          <div className="box">
+            <div>
+              <input />
+              <br />
+              <button>Farenheit</button>
+            </div>
+            <FaEquals />
+            <div>
+              <input />
+              <br />
+              <button>Celsius</button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
